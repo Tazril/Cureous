@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph" app:startDestination="@id/symptomListView">
+
+    <fragment android:id="@+id/issueListView" android:name="com.taz.cureous.issuelist.contract.IssueListView"
+              android:label="Issue List">
+        <action android:id="@+id/action_issueListView_to_issueInfoView" app:destination="@id/issueInfoView"
+                app:exitAnim="@anim/slide_out_left"
+                app:enterAnim="@anim/slide_in_right"
+                app:popExitAnim="@anim/slide_out_right"
+                app:popEnterAnim="@anim/slide_in_left"
+        />
+    </fragment>
+    <fragment android:id="@+id/symptomListView" android:name="com.taz.cureous.symptomlist.contract.SymptomListView"
+              android:label="Symptom List">
+        <action android:id="@+id/action_symptomListView_to_symptomSuggestionListView"
+                app:destination="@id/symptomSuggestionListView"/>
+    </fragment>
+    <fragment android:id="@+id/issueInfoView" android:name="com.taz.cureous.issueinfo.contract.IssueInfoView"
+              android:label="Issue Info"/>
+    <fragment android:id="@+id/symptomSuggestionListView" android:name="com.taz.cureous.symptomsuggestions.contract.SymptomSuggestionListView"
+              android:label="Final Edit">
+        <action android:id="@+id/action_symptomSuggestionListView_to_resultActivity"
+                app:destination="@id/resultActivity"/>
+    </fragment>
+
+    <activity
+            android:id="@+id/resultActivity"
+            android:name="com.taz.cureous.activities.ResultActivity"
+            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+    />
+
+</navigation>

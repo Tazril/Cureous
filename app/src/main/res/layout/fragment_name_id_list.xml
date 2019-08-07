@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:background="@color/grey" android:layout_height="match_parent"
+>
+    <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchViewNameIdList"
+            android:imeOptions="actionDone"
+            android:background="@color/white"
+    />
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNameIdListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/blankView"
+            android:layout_below="@id/searchViewNameIdList"
+            tools:listitem="@layout/item_rv_fragment_name_id_list"/>
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+               android:scaleType="centerCrop"
+               android:src="@drawable/undraw_no_data_qbuo"
+               android:layout_above="@+id/blankView"
+               android:id="@+id/noDataImageNameIdRv"
+               android:visibility="visible"
+               android:layout_below="@id/searchViewNameIdList"
+               android:contentDescription="@string/set_visible"/>
+    <TextView
+            android:id="@+id/blankView" android:visibility="gone"
+            android:layout_width="match_parent" android:layout_height="50dp"
+    android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

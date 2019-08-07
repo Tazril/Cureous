@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph_result" app:startDestination="@id/diagnosisListView">
+    <fragment android:id="@+id/diagnosisListView" android:name="com.taz.cureous.diagnosislist.contract.DiagnosisListView"
+              android:label="Diagnosis List">
+        <action android:id="@+id/action_diagnosisListView_to_issueInfoView" app:destination="@id/issueInfoView"
+                app:exitAnim="@anim/fade_out"
+                app:enterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out"
+                app:popEnterAnim="@anim/fade_in"
+        />
+    </fragment>
+    <fragment android:id="@+id/specialisationListView" android:name="com.taz.cureous.specialisationlist.contract.SpecialisationListView"
+              android:label="Specialisation List"/>
+
+    <fragment android:id="@id/issueInfoView" android:name="com.taz.cureous.issueinfo.contract.IssueInfoView"
+              android:label="Issue Info"/>
+</navigation>

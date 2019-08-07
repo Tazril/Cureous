@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Cureous</string>
+    <string name="refresh">Click Here To Refresh</string>
+
+    <string name="very_short">Lorem</string>
+    <string name="_short">Lorem ipsum dolor sit amet</string>
+    <string name="_medium">Lorem ipsum dolor sit amet, adipisci persecuti cu cum. No sea utamur dignissim interpretaris.
+        Per nostrud aliquam posidonium at, ei praesent democritum vix.
+    </string>
+    <string name="_long">Lorem ipsum dolor sit amet, adipisci persecuti cu cum. No sea utamur dignissim interpretaris.
+        Per nostrud aliquam posidonium at, ei praesent democritum vix. Sed ut esse mazim dictas, has ex harum mundi
+        tincidunt. Pri ea causae impedit necessitatibus, ne sed lorem aperiam, nam mutat quodsi at.
+    </string>
+    <string name="very_long">Lorem ipsum dolor sit amet, adipisci persecuti cu cum. No sea utamur dignissim
+        interpretaris. Per nostrud aliquam posidonium at, ei praesent democritum vix. Sed ut esse mazim dictas, has ex
+        harum mundi tincidunt. Pri ea causae impedit necessitatibus, ne sed lorem aperiam, nam mutat quodsi at.
+        Nam an aeque consectetuer, et iisque impedit delicatissimi usu. Eos sanctus adolescens at, ea eum quaeque
+        scribentur. Commune detracto definiebas ei mea, ex oratio veritus has. Id cum iriure habemus reprimique, no
+        reque erant clita mea. Ut eam melius corpora temporibus. Et mei justo luptatum.
+    </string>
+    <string name="hint_text">Enter Something</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="issues">Issues</string>
+
+    <string-array name="gender">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
+
+    <string name="close_drawer">Close Drawer</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="enter_year_of_birth">Enter year of Birth</string>
+    <string name="possible_symptoms">Possible Symptoms</string>
+    <string name="medical_condition">Medical Condition</string>
+    <string name="treatment_description">Treatment Description</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_issues">Issues</string>
+    <string name="title_specialisation">Specialisation</string>
+    <string name="set_visible">set visible</string>
+    <string name="selected_symptoms">Selected Symptoms</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+
+</resources>

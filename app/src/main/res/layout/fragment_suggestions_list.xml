@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal" android:layout_marginTop="@dimen/margin_8dp"
+                      app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                      android:layout_marginStart="@dimen/margin_8dp" app:layout_constraintEnd_toEndOf="parent"
+                      android:id="@+id/linearLayout"
+                      android:layout_marginEnd="@dimen/margin_8dp">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:text="Enter Year of Birth "
+                      android:gravity="bottom"
+                      android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            />
+            <EditText android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:maxLength="4"
+                      android:text="1990"
+                      android:inputType="number"
+                      android:id="@+id/ageSuggestionsEditText"
+
+            />
+        </LinearLayout>
+        <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/linearLayout" android:orientation="horizontal"
+                    android:id="@+id/radioGroupGender"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/margin_8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/margin_8dp">
+            <com.google.android.material.radiobutton.MaterialRadioButton android:layout_width="wrap_content"
+                                                                         android:layout_height="wrap_content"
+                                                                         android:id="@+id/radioBtnMale"
+                                                                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                                                         android:text="@string/male"
+                                                                         android:checked="true"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton android:layout_width="wrap_content"
+                                                                         android:layout_height="wrap_content"
+                                                                         android:id="@+id/radioBtnFemale"
+                                                                         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                                                                         android:text="@string/female"
+            />
+        </RadioGroup>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/tvselected"
+                  android:text="@string/selected_symptoms"
+                  android:layout_margin="@dimen/margin_8dp"
+                  android:textStyle="bold"
+                  app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+                  android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                  app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/margin_8dp"
+                  app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/margin_8dp"/>
+
+        <HorizontalScrollView android:layout_width="match_parent"
+                              android:id="@+id/hsv"
+                              app:layout_constraintTop_toBottomOf="@id/tvselected"
+                              android:layout_height="48dp">
+            <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chipGroupSelected"
+                    tools:layout_height="32dp"
+            />
+        </HorizontalScrollView>
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fetch Suggestions"
+                android:gravity="center"
+                android:id="@+id/btnSuggestions"
+                app:layout_constraintTop_toBottomOf="@id/hsv"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="@dimen/margin_8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="@dimen/margin_8dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSuggestionsFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/btnSuggestions"
+                tools:listitem="@layout/item_rv_fragment_name_id_list"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        />
+        <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/undraw_no_data_qbuo"
+                   android:id="@+id/noDataImageNameIdRv"
+                   android:visibility="visible"
+                   android:contentDescription="@string/set_visible"
+                   app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                   android:layout_marginBottom="8dp" app:layout_constraintStart_toStartOf="parent"
+                   android:layout_marginTop="8dp"
+                   app:layout_constraintTop_toTopOf="@+id/recyclerViewSuggestionsFragment"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>

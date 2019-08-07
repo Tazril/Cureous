@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.ResultActivity">
+
+    <include layout="@layout/toolbar"
+             android:id="@+id/toolbarResults"/>
+
+    <ProgressBar
+            android:id="@+id/progressBarResult"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           app:layout_constraintTop_toBottomOf="@+id/toolbarResults"
+                                                           android:id="@+id/swipeRefreshLayoutResult"
+    >
+    <fragment
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:navGraph="@navigation/nav_graph_result"
+            app:defaultNavHost="true"
+            android:id="@+id/fragmentHostResult"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarResults"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavResult"
+            android:layout_marginBottom="8dp"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="0dp"
+            app:menu="@menu/menu_bottom_navigation"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:itemHorizontalTranslationEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/bottomNavResult"
+            style="@style/Widget.Design.BottomNavigationView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
