@@ -26,7 +26,7 @@ class MainActivity : BaseActivity(R.layout.activity_main) {
 
     lateinit var navController: NavController
     lateinit var configforTopLevelDest: AppBarConfiguration
-    val rootDestinations = setOf(R.id.symptomListView, R.id.issueListView)
+    val rootDestinations = setOf(R.id.symptomListView, R.id.issueListView, R.id.noteArchActivity)
 
     override fun initActivity() {
         swipeRefreshLayout = swipeRefreshLayoutMain

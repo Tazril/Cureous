@@ -12,5 +12,10 @@
                 android:icon="@drawable/ic_symptom"
                 android:id="@id/issueListView"
         />
+        <item
+                android:title="@string/note"
+                android:icon="@drawable/ic_note"
+                android:id="@id/noteArchActivity"
+        />
     </group>
 </menu>

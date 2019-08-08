@@ -41,5 +41,6 @@
     <string name="selected_symptoms">Selected Symptoms</string>
     <string name="female">Female</string>
     <string name="male">Male</string>
+    <string name="note">Note</string>
 
 </resources>

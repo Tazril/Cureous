@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools"
           package="com.taz.cureous">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -24,7 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".notesmvvm.view.EditNoteActivity"
+                  android:parentActivityName=".notesmvvm.view.NotesArchActivity"/>
+        <activity android:name=".notesmvvm.view.NotesArchActivity"
+                  android:launchMode="singleTop"
+        />
+
 
         <meta-data
                 android:name="preloaded_fonts"

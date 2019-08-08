@@ -12,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
 import com.google.android.material.chip.Chip
 import com.taz.cureous.R
 import com.taz.cureous.globalmodels.Symptom

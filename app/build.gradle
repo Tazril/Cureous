@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
@@ -62,6 +62,10 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
     implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+
+    def lifecycle_version = "2.0.0" //LiveData + ViewModel
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
     //navigation
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'

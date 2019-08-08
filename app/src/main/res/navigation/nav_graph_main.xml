@@ -34,4 +34,9 @@
             app:popEnterAnim="@anim/slide_in_left"
     />
 
+    <activity
+            android:id="@+id/noteArchActivity"
+            android:label="Notes"
+            android:name="com.taz.cureous.notesmvvm.view.NotesArchActivity"
+        />
 </navigation>
