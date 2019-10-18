@@ -44,9 +44,6 @@ of the issue.
 For bugs, feature requests, and discussion please use [GitHub Issues][issues].
 
 
-## Created By
-- <https://github.com/tazril>
-
 ## Thanks
 
 Thank You for reading this documentation.
