@@ -49,7 +49,7 @@ For bugs, feature requests, and discussion please use [GitHub Issues][issues].
 
 ## Thanks
 
-Thank You for reading this documentation
+Thank You for reading this documentation.
 
 
 
