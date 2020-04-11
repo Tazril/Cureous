@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 
+/**
+ * This is an implemenation of ConnectivityReciever to trigger actions on connection restored
+ */
 class ConnectivityReciever() : BroadcastReceiver() {
 
     private var listener: Listener? = null

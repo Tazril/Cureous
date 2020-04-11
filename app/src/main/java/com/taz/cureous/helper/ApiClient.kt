@@ -13,8 +13,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiClient {
 
     lateinit var retroClient: Retrofit
-    private const val BASE_URL = "https://healthservice.priaid.ch/";
-    private const val DUMMY_BASE_URL = "https://sandbox-healthservice.priaid.ch/";
+    private const val BASE_URL = "https://healthservice.priaid.ch/"
+    private const val DUMMY_BASE_URL = "https://sandbox-healthservice.priaid.ch/"
 
 
     fun instantiate(context: Context): ApiClient {
@@ -36,7 +36,7 @@ object ApiClient {
             .addInterceptor(interceptor)
             .build()
 
-        retroClient = Retrofit.Builder().baseUrl(DUMMY_BASE_URL)
+        retroClient = Retrofit.Builder().baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient).build()

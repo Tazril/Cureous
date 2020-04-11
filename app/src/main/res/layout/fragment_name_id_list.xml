@@ -10,6 +10,7 @@
             android:id="@+id/searchViewNameIdList"
             android:imeOptions="actionDone"
             android:background="@color/white"
+            android:visibility="visible"
     />
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewNameIdListFragment"

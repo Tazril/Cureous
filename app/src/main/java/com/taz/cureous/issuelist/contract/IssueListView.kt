@@ -14,6 +14,7 @@ import com.taz.cureous.issuelist.model.IssueListResponseModel
 import com.taz.cureous.mvp.BaseListFragment
 import kotlinx.android.synthetic.main.fragment_name_id_list.*
 import kotlinx.android.synthetic.main.fragment_name_id_list.view.*
+import java.util.*
 
 class IssueListView() : BaseListFragment<IssueListResponseModel, Issue, IssueListAdapter>() {
 
@@ -45,7 +46,7 @@ class IssueListView() : BaseListFragment<IssueListResponseModel, Issue, IssueLis
         presenter.initPresenter()
         navController = view!!.findNavController()
         val searchView = view!!.searchViewNameIdList
-        searchView.hasListener { o, s -> o.name.contains(s) }
+        searchView.hasListener { o, s -> o.name.trim().toLowerCase(Locale.ROOT).contains(s) }
         adapter hasNoDataDisplay (noDataImageNameIdRv)
         adapter.listener = { _, it ->
             hideKeyboard()

@@ -23,6 +23,7 @@ import com.taz.cureous.symptomlist.model.SymptomListProvider
 import com.taz.cureous.symptomlist.model.SymptomListResponseModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_name_id_list.*
+import java.util.*
 
 class SymptomListView() : BaseListFragment<SymptomListResponseModel,Symptom,SymptomListAdapter>() {
 
@@ -54,7 +55,7 @@ class SymptomListView() : BaseListFragment<SymptomListResponseModel,Symptom,Symp
         swipeRefreshLayout = baseActivity.swipeRefreshLayout!!
         drawerLayout = activity!!.drawerLayoutMain
         searchView = activity!!.searchViewNameIdList
-        searchView.hasListener{ o, s->o.Name.contains(s)}
+        searchView.hasListener{ o, s-> o.Name.trim().toLowerCase(Locale.ROOT).contains(s)}
         adapter hasNoDataDisplay (noDataImageNameIdRv)
         adapter.listener = adapterListener
         adapter.listenerlong = adapterListenerLong

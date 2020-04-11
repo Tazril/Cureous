@@ -8,6 +8,12 @@ import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 
+/**
+ * This method generates Header as per the requirement of REST API server
+ * https://apimedic.com/updated_terms?r=%2Fapitest
+ * The server provide two URLs 1. Genuine with limited requests and 2. SandBox
+ * @author Taz
+ */
 public class Crypto {
     private static final String USERNAME = "Pe62Q_GMAIL_COM_AUT";
     private static final String DUSERNAME = "tazrilparvez96@gmail.com";
@@ -17,7 +23,7 @@ public class Crypto {
     private static final String DURL = "https://sandbox-authservice.priaid.ch/login";
 
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public static void main(String[] args) throws UnsupportedEncodingException {
+    public static void main(String[] args)  {
         byte[] bp = DPASSWORD.getBytes();
         SecretKeySpec secretKeySpec = new SecretKeySpec(bp, "HmacMD5");
         String computedHashString = "";

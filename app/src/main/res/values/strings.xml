@@ -42,5 +42,6 @@
     <string name="female">Female</string>
     <string name="male">Male</string>
     <string name="note">Note</string>
+    <string name="sample_priority">2</string>
 
 </resources>

@@ -10,16 +10,19 @@
              android:id="@+id/toolbarNote"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/notes_rv"
-        android:layout_below="@id/toolbarNote"
-        tools:listitem="@layout/item_note_rv"
-        />
+            android:id="@+id/notes_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbarNote"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="-2dp"
+            tools:listitem="@layout/item_note_rv" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:id="@+id/notes_fab"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
